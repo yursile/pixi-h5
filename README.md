@@ -5,10 +5,10 @@
 * **less**
 * and so so on
 
-*****
+****
 #使用方法
-*1.安装最新版node 我这是6.4.3
-*2.npm install -g gulp
-*3.npm install
-*4.gulp serve
+1. 安装最新版node 我这是6.4.3
+2. npm install -g gulp
+3. npm install
+4. gulp serve
 如果浏览器没有自动打开，手动打开localhost:5000
