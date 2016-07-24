@@ -1,0 +1,83 @@
+{
+	"frames": {
+
+		"main_player2":{
+			"frame": {"x":0,"y":0,"w":552,"h":316},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":552,"h":316},
+			"sourceSize": {"w":552,"h":316}
+		},
+		"main_player1":{
+			"frame": {"x":552,"y":0,"w":552,"h":316},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":552,"y":0,"w":995,"h":316},
+			"sourceSize": {"w":552,"h":316}
+		},
+		"main_player3":{
+			"frame": {"x":1104,"y":0,"w":552,"h":316},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":1104,"y":0,"w":552,"h":316},
+			"sourceSize": {"w":552,"h":316}
+		},
+
+		
+		"second_player2":{
+			"frame": {"x":0,"y":400,"w":552,"h":316},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":400,"w":552,"h":316},
+			"sourceSize": {"w":552,"h":316}
+		},
+		"second_player1":{
+			"frame": {"x":552,"y":400,"w":552,"h":316},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":552,"y":400,"w":995,"h":316},
+			"sourceSize": {"w":552,"h":316}
+		},
+		"second_player3":{
+			"frame": {"x":1104,"y":400,"w":552,"h":316},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":1104,"y":400,"w":552,"h":316},
+			"sourceSize": {"w":552,"h":316}
+		},
+
+
+		"npc_player1":{
+			"frame": {"x":0,"y":800,"w":382,"h":313},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":800,"w":382,"h":313},
+			"sourceSize": {"w":382,"h":313}
+		},
+		"npc_player2":{
+			"frame": {"x":382,"y":800,"w":382,"h":313},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":382,"y":800,"w":382,"h":313},
+			"sourceSize": {"w":382,"h":313}
+		},
+		"npc_player3":{
+			"frame": {"x":764,"y":800,"w":382,"h":313},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":764,"y":800,"w":382,"h":313},
+			"sourceSize": {"w":382,"h":313}
+		}
+	},
+
+
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker ",
+		"version": "1.0",
+		"image": "players.png",
+		"format": "RGBA8888",
+		"size": {"w":1656,"h":1286},
+		"scale": "1",
+		"smartupdate": "$TexturePacker:SmartUpdate:68947b15bb7efc40be030c076d92ff6a:7a7176ee4a47114ab8e7e8ecb8c361fc:fac4f515bf266e4f4ed746fa4fe7351a$"
+	}
+}

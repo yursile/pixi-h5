@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <title>h5_pixi</title>
+
+</head>
+<!-- 预加载所需库 -->
+<!-- <script src="http://news.sohu.com/upload/yifengjiashuzzx/js/preload.js"></script> -->
+
+<body ontouchmove="event.preventDefault();" >
+  <!-- loading -->
+<!--   <div class="loading">
+    <div class="loading_player"></div>
+    <div class="progress-num">0%</div>
+  </div> -->
+
+  <div class="hello">
+    hello everyone!
+  </div>
+  <div class="canvas" id="canvas"></div>
+
+
+  <script type="text/javascript">
+    //手机端自适应
+    function pageUtil(selector){
+      this.ele = document.querySelectorAll(selector)[0];
+      this.scaleNum = document.documentElement.clientWidth/640;
+      return this;
+    }
+    pageUtil.prototype.response = function(selector){
+          this.ele.style.cssText = "-webkit-transform-origin: 0 0 0px; -webkit-transform: scale("+this.scaleNum+");position: absolute;width:640px;height:1136px";
+          return this;
+    }
+    pageUtil.prototype.rotate = function(){
+      this.ele["style"]["cssText"] = "width: "+1136+"px;height: "+640+"px;transform:rotate(90deg) translate(-50%,-50%);"+
+      "transform-origin:0 0; position: absolute; top: 50%; left: 50%;"
+      return this;
+    }
+
+
+
+    /**
+    * 进入界面前预加载
+    */
+
+    // new pageUtil(".loading").response();
+    // var loader = new resLoader({
+    //   resources: [
+    //     './img/players.png'
+    //   ],
+    //   onStart: function(total) {},
+    //   onProgress: function(current, total) {
+    //     var percent = parseInt(current / total * 100) + '%';
+    //     document.querySelector('.progress-num').innerHTML = percent;
+      
+    //   },
+    //   onComplete: function(total) {
+        
+    //     document.querySelector('.loading').style.display = "none";
+    //   }
+    // });
+    // loader.start();
+
+    window.pas = new pageUtil(".canvas");
+    pas.response();
+  </script>
+</body>
+
+
+<script type="text/javascript" src="./js/bundle.js"></script>
+</html>

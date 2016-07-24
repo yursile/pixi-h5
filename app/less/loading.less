@@ -1,0 +1,50 @@
+.loading{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(88, 137, 218);
+
+  .loading_player{
+    width: 297px;
+    height: 170px;
+    position: absolute;
+    left: 124px;
+    top:356px;
+    transform:translateZ(0);
+    background: url(../img/loading.png) no-repeat;
+    animation:loading 1s linear infinite;
+    animation-timing-function: step-start;    
+    animation-fill-mode: forwards;
+    z-index: 9999;
+  }
+
+  @keyframes loading{
+    0%{
+      background-position: 0 0;
+    }
+
+    50%{
+      background-position: -297px 0;
+    }
+
+    100%{
+     background-position: -594px 0;
+    }
+  }
+
+  .progress-num{
+    color: #fff;
+    font-family: 微软雅黑;
+    font-weight: bold;
+    font-size: 50px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 588px;
+    text-align: center;
+  }
+}
