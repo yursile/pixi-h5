@@ -1,18 +1,12 @@
 .loading{
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  .wrapper();
   background: rgb(88, 137, 218);
 
   .loading_player{
     width: 297px;
     height: 170px;
-    position: absolute;
-    left: 124px;
-    top:356px;
-    transform:translateZ(0);
+    .abs(124px,356px);
+    .ani_a();
     background: url(../img/loading.png) no-repeat;
     animation:loading 1s linear infinite;
     animation-timing-function: step-start;    
@@ -39,12 +33,6 @@
     font-family: 微软雅黑;
     font-weight: bold;
     font-size: 50px;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 588px;
-    text-align: center;
+    .abs_text(588px);
   }
 }

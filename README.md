@@ -15,5 +15,5 @@
 
 
 ##开发
-> preset.less
->> 所有人都可把常用到的css封装到preset.less里，上传到master
+> **preset.less**
+>> *所有人都可把常用到的css封装到preset.less里，上传到master*
