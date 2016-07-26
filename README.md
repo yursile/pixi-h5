@@ -21,11 +21,11 @@
 
 >**sprite**
 
-*git pull origin master
-*npm install
-*gulp sprite 会生成雪碧图和sprite.less文件
-*关于使用sprite.less见style.less文件
-*成功后gulp serve 再打开localhost:5000看效果
+* git pull origin master
+* npm install
+* gulp sprite 会生成雪碧图和sprite.less文件
+* 关于使用sprite.less见style.less文件
+* 成功后gulp serve 再打开localhost:5000看效果
 
 
 
