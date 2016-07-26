@@ -3,6 +3,7 @@
 * **es6**
 * **pixi**
 * **less**
+* **sprite**
 * and so so on
 
 ****
@@ -15,5 +16,18 @@
 
 
 ##开发
+
+*这次集成了sprite雪碧图制作*
+
+>**sprite**
+
+*git pull origin master
+*npm install
+*gulp sprite 会生成雪碧图和sprite.less文件
+*关于使用sprite.less见style.less文件
+*成功后gulp serve 再打开localhost:5000看效果
+
+
+
 > **preset.less**
 >> *所有人都可把常用到的css封装到preset.less里，上传到master*
