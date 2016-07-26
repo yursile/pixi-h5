@@ -21,6 +21,38 @@ var gulp = require('gulp'),
       browsers: ["ie >= 8", "ie_mob >= 10", "ff >= 26", "chrome >= 30", "safari >= 6", "opera >= 23", "ios >= 5", "android >= 2.3", "bb >= 10"]
     });
 
+
+var spritesmith = require('gulp.spritesmith');
+var merge = require('merge-stream');
+ 
+ 
+gulp.task('sprite', function () {
+
+
+  var spriteData = gulp.src('./public/img/sprite/*.png').pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: 'sprite.less',
+    imgPath: '../img/sprite.png'
+  }));
+ 
+  // Pipe image stream through image optimizer and onto disk 
+  var imgStream = spriteData.img
+    // DEV: We must buffer our stream into a Buffer for `imagemin` 
+    // .pipe(buffer())
+    // .pipe(imagemin())
+    .pipe(gulp.dest('./public/img/'));
+ 
+  // Pipe CSS stream through CSS optimizer and onto disk 
+  var cssStream = spriteData.css
+    // .pipe(csso())
+    .pipe(gulp.dest('./app/less/'));
+ 
+  // Return a merged stream to handle both `end` events 
+  return merge(imgStream, cssStream);
+});
+
+
+
 gulp.task('less', function() {
     // var processors = [
     //     require('cssgrace')

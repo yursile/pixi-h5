@@ -1,7 +1,16 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
 .loading {
-  position: absolute;
   left: 0;
   top: 0;
+  position: absolute;
   width: 100%;
   height: 100%;
   background: #5889da;
@@ -9,9 +18,9 @@
 .loading .loading_player {
   width: 297px;
   height: 170px;
-  position: absolute;
   left: 124px;
   top: 356px;
+  position: absolute;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
   background: url(../img/loading.png) no-repeat;
@@ -50,11 +59,11 @@
   font-family: 微软雅黑;
   font-weight: bold;
   font-size: 50px;
-  position: absolute;
-  width: 100%;
   left: 0;
+  top: 588px;
+  position: absolute;
   right: 0;
   margin: auto;
-  top: 588px;
+  width: 100%;
   text-align: center;
 }
