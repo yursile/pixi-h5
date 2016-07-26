@@ -49,3 +49,5 @@ Temporary Items
 
 #node_modules
 node_modules/
+public/css/
+public/img/sprite.png

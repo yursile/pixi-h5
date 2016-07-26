@@ -24,12 +24,19 @@ var gulp = require('gulp'),
 
 var spritesmith = require('gulp.spritesmith');
 var merge = require('merge-stream');
- 
- 
+gulp.task('sprite1', function () {
+  var spriteData = gulp.src('./public/img/sprites/*.png').pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: 'sprite.css'
+  }));
+  return spriteData.pipe(gulp.dest('./public/img/'));
+});
+
+
 gulp.task('sprite', function () {
 
 
-  var spriteData = gulp.src('./public/img/sprite/*.png').pipe(spritesmith({
+  var spriteData = gulp.src('./public/img/sprites/*.png').pipe(spritesmith({
     imgName: 'sprite.png',
     cssName: 'sprite.less',
     imgPath: '../img/sprite.png'

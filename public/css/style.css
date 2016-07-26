@@ -8,9 +8,9 @@ html {
   padding: 0;
 }
 .loading {
-  position: absolute;
   left: 0;
   top: 0;
+  position: absolute;
   width: 100%;
   height: 100%;
   background: #5889da;
@@ -18,9 +18,9 @@ html {
 .loading .loading_player {
   width: 297px;
   height: 170px;
-  position: absolute;
   left: 124px;
   top: 356px;
+  position: absolute;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
   background: url(../img/loading.png) no-repeat;
@@ -59,14 +59,61 @@ html {
   font-family: 微软雅黑;
   font-weight: bold;
   font-size: 50px;
-  position: absolute;
-  width: 100%;
   left: 0;
+  top: 588px;
+  position: absolute;
   right: 0;
   margin: auto;
-  top: 588px;
+  width: 100%;
   text-align: center;
 }
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
 #all {
   width: 100%;
   height: 100%;
@@ -80,5 +127,15 @@ html {
   width: 100%;
   text-align: center;
   font-size: 50px;
+  z-index: 999;
+}
+.sohu {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -146px;
+  width: 114px;
+  height: 57px;
+  left: 20px;
+  top: 20px;
+  position: absolute;
   z-index: 999;
 }
