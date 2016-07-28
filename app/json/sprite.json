@@ -1,0 +1,46 @@
+{
+    "frames": {
+        "close.png": {
+            "frame": {
+                "x": 137,
+                "y": 97,
+                "w": 46,
+                "h": 45
+            }
+        },
+        "cloud.png": {
+            "frame": {
+                "x": 0,
+                "y": 97,
+                "w": 137,
+                "h": 49
+            }
+        },
+        "saucer.png": {
+            "frame": {
+                "x": 0,
+                "y": 0,
+                "w": 218,
+                "h": 97
+            }
+        },
+        "sohu.png": {
+            "frame": {
+                "x": 0,
+                "y": 146,
+                "w": 114,
+                "h": 57
+            }
+        }
+    },
+    "meta": {
+        "app": "spritesheet-templates",
+        "version": "10.1.4",
+        "image": "../img/sprite.png",
+        "scale": 1,
+        "size": {
+            "w": 218,
+            "h": 203
+        }
+    }
+}

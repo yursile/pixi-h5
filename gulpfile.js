@@ -24,17 +24,8 @@ var gulp = require('gulp'),
 
 var spritesmith = require('gulp.spritesmith');
 var merge = require('merge-stream');
-gulp.task('sprite1', function () {
-  var spriteData = gulp.src('./public/img/sprites/*.png').pipe(spritesmith({
-    imgName: 'sprite.png',
-    cssName: 'sprite.css'
-  }));
-  return spriteData.pipe(gulp.dest('./public/img/'));
-});
-
 
 gulp.task('sprite', function () {
-
 
   var spriteData = gulp.src('./public/img/sprites/*.png').pipe(spritesmith({
     imgName: 'sprite.png',
@@ -53,6 +44,31 @@ gulp.task('sprite', function () {
   var cssStream = spriteData.css
     // .pipe(csso())
     .pipe(gulp.dest('./app/less/'));
+ 
+  // Return a merged stream to handle both `end` events 
+  return merge(imgStream, cssStream);
+});
+
+
+gulp.task('pixi', function () {
+  var spriteData = gulp.src('./public/img/sprites/*.png').pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: 'sprite.json',
+    imgPath: '../img/sprite.png',
+    cssFormat: 'json_texture'
+  }));
+ 
+  // Pipe image stream through image optimizer and onto disk 
+  var imgStream = spriteData.img
+    // DEV: We must buffer our stream into a Buffer for `imagemin` 
+    // .pipe(buffer())
+    // .pipe(imagemin())
+    .pipe(gulp.dest('./public/img/'));
+ 
+  // Pipe CSS stream through CSS optimizer and onto disk 
+  var cssStream = spriteData.css
+    // .pipe(csso())
+    .pipe(gulp.dest('./public/img/'));
  
   // Return a merged stream to handle both `end` events 
   return merge(imgStream, cssStream);
