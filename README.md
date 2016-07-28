@@ -28,7 +28,7 @@
 * 成功后gulp serve 再打开localhost:5000看效果
 
 
-*生成pixi等库使用的sprite.json文件，与textruepacker类似
+*生成pixi等库使用的sprite.json文件，与textruepacker类似*
 >**textruepacker**
 *运行gulp pixi
 *img目录下会有sprite.json的文件
