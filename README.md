@@ -30,8 +30,8 @@
 
 *生成pixi等库使用的sprite.json文件，与textruepacker类似*
 >**textruepacker**
-*运行gulp pixi
-*img目录下会有sprite.json的文件
+* 运行gulp pixi
+* img目录下会有sprite.json的文件
 
 > **preset.less**
 >> *所有人都可把常用到的css封装到preset.less里，上传到master*
