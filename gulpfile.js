@@ -21,6 +21,15 @@ var gulp = require('gulp'),
       browsers: ["ie >= 8", "ie_mob >= 10", "ff >= 26", "chrome >= 30", "safari >= 6", "opera >= 23", "ios >= 5", "android >= 2.3", "bb >= 10"]
     });
 
+var postcss = require('gulp-postcss');
+var px2rem = require('postcss-px2rem');
+ 
+gulp.task('px', function() {
+  var processors = [px2rem({remUnit: 100})];
+  return gulp.src('./public/css/style.css')
+    .pipe(postcss(processors))
+    .pipe(gulp.dest('./public/rem/'));
+});
 
 var spritesmith = require('gulp.spritesmith');
 var merge = require('merge-stream');
@@ -133,7 +142,8 @@ gulp.task('watch', function() {
   gulp.watch('./app/js/**/*.js',['browserify']);
   gulp.watch('./public/js/bundle.min.js',['js']);
   gulp.watch('./index.html',['html']);
-  gulp.watch('./public/css/*.css',['css']);
+  gulp.watch('./public/css/*.css',['css','px']);
+  // gulp.watch('./')
   // gulp.watch(['./public/css/*.css','./public/js/bundle.min.js','./index.html'],['reload']);
 });
 

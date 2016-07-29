@@ -106,11 +106,17 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   background-image: url(@sprite-image-bare);
 }
 
+.sprite-size() {
+  background-size: @spritesheet-width;
+}
+
+
 .sprite(@sprite) {
   .sprite-image(@sprite);
   .sprite-position(@sprite);
   .sprite-width(@sprite);
   .sprite-height(@sprite);
+  .sprite-size();
 }
 
 /*

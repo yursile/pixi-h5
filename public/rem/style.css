@@ -3,10 +3,12 @@ html {
   width: 100%;
   height: 100%;
 }
+
 * {
   margin: 0;
   padding: 0;
 }
+
 .loading {
   left: 0;
   top: 0;
@@ -15,58 +17,67 @@ html {
   height: 100%;
   background: #5889da;
 }
+
 .loading .loading_player {
-  width: 297px;
-  height: 170px;
-  left: 124px;
-  top: 356px;
+  width: 2.97rem;
+  height: 1.7rem;
+  left: 1.24rem;
+  top: 3.56rem;
   position: absolute;
   -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  transform: translateZ(0);
   background: url(../img/loading.png) no-repeat;
   -webkit-animation: loading 1s linear infinite;
-          animation: loading 1s linear infinite;
+  animation: loading 1s linear infinite;
   -webkit-animation-timing-function: step-start;
-          animation-timing-function: step-start;
+  animation-timing-function: step-start;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   z-index: 9999;
 }
+
 @-webkit-keyframes loading {
   0% {
     background-position: 0 0;
   }
+
   50% {
-    background-position: -297px 0;
+    background-position: -2.97rem 0;
   }
+
   100% {
-    background-position: -594px 0;
+    background-position: -5.94rem 0;
   }
 }
+
 @keyframes loading {
   0% {
     background-position: 0 0;
   }
+
   50% {
-    background-position: -297px 0;
+    background-position: -2.97rem 0;
   }
+
   100% {
-    background-position: -594px 0;
+    background-position: -5.94rem 0;
   }
 }
+
 .loading .progress-num {
   color: #fff;
   font-family: 微软雅黑;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 0.5rem;
   left: 0;
-  top: 588px;
+  top: 5.88rem;
   position: absolute;
   right: 0;
   margin: auto;
   width: 100%;
   text-align: center;
 }
+
 /*
 LESS variables are information about icon's compiled state, stored under its original file name
 
@@ -80,6 +91,7 @@ The large array-like variables contain all information about a single icon
 At the bottom of this section, we provide information about the spritesheet itself
 @spritesheet: width height image @spritesheet-sprites;
 */
+
 /*
 The provided classes are intended to be used with the array-like variables
 
@@ -105,6 +117,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 // HTML
 <i class="icon icon-home"></i>
 */
+
 /*
 The `.sprites` mixin generates identical output to the CSS template
   but can be overridden inside of LESS
@@ -114,30 +127,33 @@ This must be run when you have at least 2 sprites.
 
 .sprites(@spritesheet-sprites);
 */
+
 #all {
   width: 100%;
   height: 100%;
 }
+
 .hello {
   left: 0;
-  top: 300px;
+  top: 3rem;
   position: absolute;
   right: 0;
   margin: auto;
   width: 100%;
   text-align: center;
-  font-size: 50px;
+  font-size: 0.5rem;
   z-index: 999;
 }
+
 .sohu {
   background-image: url(../img/sprite.png);
-  background-position: 0px -146px;
-  width: 114px;
-  height: 57px;
-  -webkit-background-size: 218px 218px;
-          background-size: 218px;
-  left: 20px;
-  top: 20px;
+  background-position: 0 -1.46rem;
+  width: 1.14rem;
+  height: 0.57rem;
+  -webkit-background-size: 2.18rem 2.18rem;
+  background-size: 2.18rem;
+  left: 0.2rem;
+  top: 0.2rem;
   position: absolute;
   z-index: 999;
 }

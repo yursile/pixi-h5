@@ -3,13 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./rem/style.css">
   <title>h5_pixi</title>
 
 </head>
 <!-- 预加载所需库 -->
 <!-- <script src="http://news.sohu.com/upload/yifengjiashuzzx/js/preload.js"></script> -->
 
+
+<script>
+    // var view_width = document.getElementsByTagName('html')[0].getBoundingClientRect().width;
+    // var _html = document.getElementsByTagName('html')[0];
+    // view_width > 640 ? _html.style.fontSize = 640 / 16 + 'px' : _html.style.fontSize = view_width / 16 + 'px';
+    // document.getElementsByTagName('html')[0].style.fontSize = "62.5%";
+     var html = document.documentElement;
+        var windowWidth = html.clientWidth;
+        html.style.fontSize = windowWidth / 6.4 + 'px';
+</script>
 <body ontouchmove="event.preventDefault();" >
   <!-- loading -->
 <!--   <div class="loading">
