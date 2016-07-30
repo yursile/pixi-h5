@@ -7,6 +7,38 @@ html {
   margin: 0;
   padding: 0;
 }
+.breath {
+  -webkit-animation-name: breath;
+          animation-name: breath;
+}
+@-webkit-keyframes breath {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes breath {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .loading {
   left: 0;
   top: 0;

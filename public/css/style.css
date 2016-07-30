@@ -7,6 +7,38 @@ html {
   margin: 0;
   padding: 0;
 }
+.breath {
+  -webkit-animation-name: breath;
+          animation-name: breath;
+}
+@-webkit-keyframes breath {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes breath {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .loading {
   left: 0;
   top: 0;
@@ -89,21 +121,6 @@ The provided classes are intended to be used with the array-like variables
 .icon-email {
   .sprite(@icon-email);
 }
-
-Example usage in HTML:
-
-`display: block` sprite:
-<div class="icon-home"></div>
-
-To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
-
-// CSS
-.icon {
-  display: inline-block;
-}
-
-// HTML
-<i class="icon icon-home"></i>
 */
 /*
 The `.sprites` mixin generates identical output to the CSS template

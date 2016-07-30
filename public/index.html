@@ -10,32 +10,12 @@
 <!-- 预加载所需库 -->
 <!-- <script src="http://news.sohu.com/upload/yifengjiashuzzx/js/preload.js"></script> -->
 
-
 <script>
-    // var view_width = document.getElementsByTagName('html')[0].getBoundingClientRect().width;
-    // var _html = document.getElementsByTagName('html')[0];
-    // view_width > 640 ? _html.style.fontSize = 640 / 16 + 'px' : _html.style.fontSize = view_width / 16 + 'px';
-    // document.getElementsByTagName('html')[0].style.fontSize = "62.5%";
-     var html = document.documentElement;
-        var windowWidth = html.clientWidth;
-        html.style.fontSize = windowWidth / 6.4 + 'px';
-</script>
-<body ontouchmove="event.preventDefault();" >
-  <!-- loading -->
-<!--   <div class="loading">
-    <div class="loading_player"></div>
-    <div class="progress-num">0%</div>
-  </div> -->
-
-  <div class="hello">
-    hello everyone!
-  </div>
-  <div class="sohu"></div>
-  <div class="canvas" id="canvas"></div>
-
-
-  <script type="text/javascript">
-    //手机端自适应
+    var html = document.documentElement;
+    var windowWidth = html.clientWidth;
+    html.style.fontSize = windowWidth / 6.4 + 'px';
+     
+    //为canvas缩放，使用640*1136
     function pageUtil(selector){
       this.ele = document.querySelectorAll(selector)[0];
       this.scaleNum = document.documentElement.clientWidth/640;
@@ -50,9 +30,22 @@
       "transform-origin:0 0; position: absolute; top: 50%; left: 50%;"
       return this;
     }
+</script>
+<body ontouchmove="event.preventDefault();" >
+  <!-- loading -->
+<!--   <div class="loading">
+    <div class="loading_player"></div>
+    <div class="progress-num">0%</div>
+  </div> -->
+
+  <div class="hello">
+    hello everyone!
+  </div>
+  <div class="sohu"></div>
+  <div class="canvas" style="width:100%;height:100%" id="canvas"></div>
 
 
-
+  <script type="text/javascript">
     /**
     * 进入界面前预加载
     */
@@ -74,9 +67,14 @@
     //   }
     // });
     // loader.start();
+    // 
+    // 
+   
 
     window.pas = new pageUtil(".canvas");
     pas.response();
+
+
   </script>
 </body>
 

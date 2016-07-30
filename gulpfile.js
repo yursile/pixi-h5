@@ -39,7 +39,8 @@ gulp.task('sprite', function () {
   var spriteData = gulp.src('./public/img/sprites/*.png').pipe(spritesmith({
     imgName: 'sprite.png',
     cssName: 'sprite.less',
-    imgPath: '../img/sprite.png'
+    imgPath: '../img/sprite.png',
+    cssTemplate:"rem.template.handlebars"
   }));
  
   // Pipe image stream through image optimizer and onto disk 
@@ -155,7 +156,8 @@ gulp.task("htmlmin",function(){
 });
 
 gulp.task("cssmin",function(){
-  gulp.src(['./public/css/*.css','!./public/css/*.min.css']).
+    gulp.src(['./public/rem/*.css','!./public/rem/*.min.css']).
+  // gulp.src(['./public/css/*.css','!./public/css/*.min.css']).
   pipe(cssmin()).
   pipe(rename({suffix: '.min'})).
   pipe(gulp.dest('./public/css'))

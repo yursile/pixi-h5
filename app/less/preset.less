@@ -37,3 +37,27 @@ body,html{
 .ani_a(){
 	transform:translateZ(0);
 }
+
+
+//呼吸效果  半透明到透明;
+.breath{
+  animation-name:breath;
+  @keyframes breath{
+    0%{
+      opacity: 1
+    }
+
+    40%{
+      opacity: 0.5
+    }
+
+    80%{
+      opacity: 1
+    }
+
+  
+    100%{
+      opacity: 1;
+    }
+  }
+}
