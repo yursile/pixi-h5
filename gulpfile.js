@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     less = require('gulp-less'),
     path = require('path'),
     rename = require('gulp-rename'),
+    fontSpider = require( 'gulp-font-spider' ),
 
     //这也是压缩CSS的
     LessPluginCleanCSS = require('less-plugin-clean-css'),
@@ -57,6 +58,11 @@ gulp.task('sprite', function () {
  
   // Return a merged stream to handle both `end` events 
   return merge(imgStream, cssStream);
+});
+
+gulp.task('fontspider', function() {
+    return gulp.src('./public/index.html')
+        .pipe(fontSpider());
 });
 
 
